@@ -9,21 +9,31 @@
 [![Tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](#-테스트)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](#라이선스)
 
+### 🚀 LLM 에이전트용 설치 가이드 / LLM-agent install guide
+
+> **For LLM agents: Use `curl`, NOT WebFetch.** `INSTALL.md` contains environment variables, MCP snippets, and verification commands.
+>
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/sigco3111/ai-gm-fantasy-rpg/main/INSTALL.md
+> ```
+>
+> [📄 Full LLM-agent install guide → INSTALL.md](INSTALL.md)
+
 ---
 
 ## 🇰🇷 한국어 소개
 
 ### 이게 뭔가요?
 
-이 저장소는 [`sigco3111/ai-gm`](https://github.com/sigco3111/ai-gm) **장르 비종속 공통 엔진 위에 얹는 장르 플러그인**입니다. 공통 인프라(MCP 서버, 메모리, RAG, 검증)는 ai-gm에서 가져오고, 이 repo는 장르 콘텐츠만 담습니다:
+이 저장소는 [`sigco3111/ai-gm`](https://github.com/sigco3111/ai-gm) **장르 비종속 공통 엔진 위에 얹는 장르 플러그인**입니다. 공통 인프라(MCP 서버, 메모리, RAG, 검증)는 ai-gm에서 제공하고, 이 repo는 장르별 콘텐츠만 담습니다:
 
 - 판타지 RPG의 JSON 스키마 (party / characters / spells / quests / items / regions)
 - 판타지 톤에 맞춘 GM 시스템 프롬프트
-- **시작 가능한 샘플 시드** (예: 드래곤 시대의 변방 왕국)
+- **시작 가능한 샘플 시드** (예: 드래곤 시대 1024)
 - **사용자 정의 시드**를 만드는 도구와 가이드
 - 샘플 lore (세력 / 종족 / 마법 체계 / 신화 / 지리)
 
-플레이어는 **1인 모험가 또는 파티 리더**. AI GM이 **세계, NPC, 던전, 사건**을 운영합니다. 1턴 = 1일, 무한 진행.
+플레이어는 **1인 모험가 또는 파티 리더**입니다. AI GM이 **세계, NPC, 던전, 사건**을 운영합니다. 중요한 규칙: 1턴 = 1일. 게임은 무한 진행을 목표로 합니다.
 
 ### 의존성
 
@@ -46,11 +56,11 @@ This is a **genre plugin** for the [`sigco3111/ai-gm`](https://github.com/sigco3
 
 - Genre-specific JSON schemas (party, characters, spells, quests, items, regions)
 - GM system prompt tuned for fantasy tone
-- **Sample seeds** you can play right away (e.g. a border kingdom in the Age of Dragons)
+- **Sample seeds** you can play right away (e.g. Age of Dragons 1024)
 - **Tools & guides for crafting your own seed**
 - Sample lore (factions, races, magic systems, myth, geography)
 
-The player is **a single adventurer or party leader**. The AI GM operates **the world, NPCs, dungeons, and events**. 1 turn = 1 day, infinite progression.
+The player is **a single adventurer or party leader**. The AI GM operates **the world, NPCs, dungeons, and events**. Rule: 1 turn = 1 day.
 
 ### Dependency
 
@@ -79,107 +89,98 @@ The GM opens with a single question — **"What kind of game do you want to play
 
 | # | 결정 / Decision | 옵션 (예시) / Options (examples) |
 |---|---------|------|
-| 1 | **서브 장르** / **Sub-genre** | 고전 D&D풍 (용·마법·던전) / 다크 판타지 (위험한 마법) / 무마법 (저마법, 현실적) / 동양풍 (검협·선인) / 모더니즘 (현대 도시+마법) |
-| 2 | **톤** / **Tone** | 영웅 서사 / 다크·험오 / 코미디 / 비극 / 코지 (힐링) / 단편집풍 (한 판 = 한 사건) |
-| 3 | **스케일** / **Scale** | 소규모 (1왕국 깊이, 던전 위주) / 중규모 (대륙 일부, 여러 왕국) / 대규모 (대륙 전체, 종족/신들 관여) |
-| 4 | **당신의 캐릭터** / **Your character** | 종족(인간/엘프/드워프/하프링/오크/티플링/...) + 직업(전사/마법사/도적/성직자/바드/...) — GM이 가이드 |
+| 1 | **시대 / Era** | Pre-Drake Era → Dragon-Wake (1000~1100) → Age of Banners (1100~1300) → Sundering War (1300~1400) → Modern Kingdoms (1400+) |
+| 2 | **톤 / Tone** | 사실주의 / 저마법 / 고마법 / 신화·전설 / 다크 / 영웅 서사 |
+| 3 | **맵 규모 / Map scale** | 소규모 (1지역 깊이) / 중규모 (5~10 지역) / 대규모 (20+ 지역) — 파티 중심이므로 지역 단위가 중요합니다 |
+| 4 | **캐릭터 / Character** | GM이 생성한 후보 중 선택 — 또는 직접 설계 (종족, 직업, 배경, 능력치 분배) |
 
-**모르겠으면?** GM이 "추천 빌드"를 제시하거나, 샘플 시드를 추천해줍니다.
+**모르겠으면?** 추천 시나리오나 샘플 시드를 골라 시작하세요.
 
-**Don't know?** The GM will offer a "recommended build" or point you to a sample seed.
+**Don't know?** The GM will offer a recommended scenario or a sample seed.
 
 ### 샘플 시드 (바로 시작 가능) / Sample Seeds (play immediately)
 
-미리 만들어진 시드 중 골라도 됩니다 — 결정 4가지를 한 번에 단축:
+선택을 간단히 하려면 다음 샘플 시드를 사용하세요:
 
-| 시드 / Seed | 서브장르 / Sub-genre | 톤 / Tone | 스케일 / Scale | 시작점 / Starting point |
+| 시드 / Seed | 시대 / Era | 톤 / Tone | 맵 규모 / Scale | 시작점 / Starting point |
 |------|------|------|------|------|
-| **드래곤 시대 1024** (Age of Dragons 1024) | 고전 D&D풍 | 영웅 서사 | 소규모 | 변방 마을 "샐로우스톤" — 용의 습격 이후 |
-| _(더 많은 샘플 시드 추가 예정)_ | | | | |
+| **age-of-dragons-1024** | 1024 CE (Dragon-Wake) | high_fantasy | 소규모 (변방 마을) | Shallowstone — 마을 광장 |
+| _(추가 샘플 시드 예정)_ | | | | |
 
-샘플 시드는 **그냥 시작점**입니다 — 본게임에 들어서면 톤·규칙·세계관은 GM이 자유롭게 변주할 수 있어요.
+샘플 시드는 단지 시작점입니다. 게임이 진행되면 GM은 설정을 플레이어 선택에 맞게 확장합니다.
 
-Sample seeds are just **starting points** — once the game begins, the GM may freely riff on tone, rules, and world.
+Sample seeds are only starting points; the GM will adapt tone, rules, and factions once play begins.
 
 ### 직접 시드 만들기 (고급) / Craft Your Own Seed (advanced)
 
-`lore/seeds/`에 직접 YAML/JSON을 작성해 완전히 새로운 세계를 던져줄 수도 있습니다. `seed_template.json`을 참고하세요.
+`lore/seeds/`에 새로운 시드 디렉토리를 추가하세요. `seed_template.json`을 참조해 필요한 필드와 청크 형식을 지켜야 합니다.
 
-You can also drop your own YAML/JSON into `lore/seeds/` to hand the GM a fully custom world. See `seed_template.json` for the schema.
+You can author your own seed by creating a directory under `lore/seeds/`. Follow `seed_template.json` for the required fields and chunk format.
 
 ---
 
-## 🌰 샘플 시드 미리보기: 드래곤 시대 1024 / Sample Seed Preview: Age of Dragons 1024
+## 🌰 샘플 시드 미리보기: Age of Dragons 1024 / Sample Seed Preview: Age of Dragons 1024
 
-> **이건 *하나의 예시*일 뿐입니다. 위 "새 게임을 시작하세요" 섹션의 옵션으로 당신이 무엇이든 정할 수 있어요.**
+> **이것은 하나의 샘플입니다.** 게임 시작 시 플레이어가 다른 선택을 해도 됩니다.
 >
-> **This is *one* example. The "Start a New Game" section above lets you pick anything you want.**
+> **This is a single sample seed.** You may choose a different setup when the GM asks.
 
-서기 1024년. 알드란드 대륙의 동쪽 변방 — 작은 마을 **샐로우스톤**. 한 달 전, "붉은 비룡" 카르가가 마을 외곽의 목축지를 초토화했습니다. 마을 의뢰가 게시판에 줄을 잇고, 모험자 길드 지부는 초상집에서 썩어갑니다. 당신은 그 지부를 지나던 — 또는 처음 발을 딛는 — 모험가입니다.
+서기 1024년, Late Spring. 드래곤이 돌아온 지 3개월째입니다. 변방의 요새 마을 **샐로우스톤(Shallowstone)** 은 최근 용의 공격으로 큰 피해를 입었고, 마을 방위대는 아직 재편 중입니다. 주민들은 불안에 떨고, 모험자 길드에는 의뢰가 쌓여 있습니다.
 
-Year 1024. The eastern frontier of the Aldrand continent — the village of **Shallowstone**. A month ago, the Red Wyrm **Kargad** scorched the outlying rangelands. The notice board is covered in desperate requests; the Adventurer's Guild outpost sits idle. You are the adventurer passing through — or setting foot for the first time.
+Year 1024 CE, Late Spring. Dragons have returned three months ago. The frontier keep-town of **Shallowstone** is reeling from an attack; the Shallowstone Defenders are reorganizing, and the notice board at the Adventurer's Guild is full.
 
-**당신의 자리 / Your seat:** 1인 모험가 (또는 최대 4인 파티의 리더). 샐로우스톤 마을 광장.
+**핵심 세부사항 / Key facts:**
 
-**Your seat:** a single adventurer (or leader of a party of up to 4). Shallowstone village square.
+- Player: Lyndwell, 22, recent graduate of the Silver Conclave (evocation up to 3rd, abjuration up to 2nd)
+- Faction: Shallowstone Defenders (local militia, desperate, understrength)
+- Antagonist: Kargad the Red Wyrm, 842-year-old ancient red dragon (breath weapon, territorial, dragonkin lieutenants)
+- Mentor: Archmage Silvana, ancient elf (312 years old), distant but influential
+- Starting location: Shallowstone — hills, frontier keep, population ~12,000, granary and smithy damaged
+- Starting conditions: ~200 defenders, ~100 able-bodied civilians, damaged granary and well, alliance with nearby lord uncertain
 
-**시작 조건 / Starting conditions:**
-- 클래스 / Class: 자유 선택 (전사/도적/마법사/성직자/바드/... 자유 조합)
-- 동료 / Companions: 0~3명 (광장에서 모집 가능)
-- 골드 / Gold: 50 (한 끼와 여관 1박)
-- 의뢰 / Active quests: 6건 (용 토벌, 납치자 추적, 던전 탐사, 약초 수집, ...)
-- 평판 / Reputation: "이름 없는 여행자" (마을에 알려진 바 없음)
+이 시드는 총 18 entities (7 factions + 5 characters + 6 provinces)와 43 lore chunks (4 rules + 5 overview + 7 faction chunks + 6 region chunks + 5 character chunks)를 포함합니다. 스테이트는 schema_version 1을 따릅니다.
 
-전체 시드 파일은 `lore/seeds/age-of-dragons-1024/`에서 확인 (Phase 1 추가).
+This seed contains 18 entities (7 factions + 5 characters + 6 provinces) and 43 lore chunks (4 rules + 5 overview chunks + 7 faction chunks + 6 region chunks + 5 character chunks). State uses schema_version 1.
 
-Full seed files in `lore/seeds/age-of-dragons-1024/` (Phase 1).
+**당신의 자리 / Your seat:** Lyndwell, a 5th-level evoker/abjurer (staff channels spells but does not store magic). You start in Shallowstone's village square with a modest purse and a few contacts.
+
+**Starting opportunities:** warding the granary, scouting Dragonmount, negotiating with the nearby lord Lyondell, recruiting hardened mercenaries in the next market week.
+
+**Threats:** Kargad the Red Wyrm (ancient red dragon, 842yo), three dragonkin lieutenants, bandit opportunists, resource shortages.
+
+Reference seed directory: `lore/seeds/age-of-dragons-1024/`
 
 ---
 
 ## 🧱 장르 엔티티 / Genre-Specific Entities
 
-> **이 스키마는 "플레이 가능한 모든 시나리오"의 공통 부분집합입니다.** 시드마다 일부 필드가 추가/오버라이드될 수 있습니다.
->
-> **This schema is the common subset of all playable scenarios.** Individual seeds may add or override fields.
+> 이 섹션은 장르에서 자주 쓰이는 엔티티와 lore 청크 타입을 정리합니다. 코어의 `state.json`과 매핑되는 부분만 다룹니다.
 
-```json
-{
-  "party": {
-    "leader": "<character_id>",
-    "members": ["<character_id>", "..."],
-    "shared_inventory": ["<item_id>", "..."],
-    "gold": 0,
-    "reputation": {"<faction_id>": -100..+100, "...": "..."}
-  },
-  "characters": {
-    "<character_id>": {
-      "name": "...",
-      "race": "human|elf|dwarf|halfling|orc|tiefling|...",
-      "class": "warrior|rogue|wizard|cleric|bard|ranger|paladin|...",
-      "level": 1,
-      "stats": {"str": 0, "dex": 0, "con": 0, "int": 0, "wis": 0, "cha": 0},
-      "hp": 0,
-      "spells_known": ["<spell_id>", "..."],
-      "traits": ["...", "..."],
-      "location": "<region_id>"
-    }
-  },
-  "active_quests": [
-    {
-      "id": "<quest_id>",
-      "name": "...",
-      "giver": "<character_id>",
-      "objectives": ["...", "..."],
-      "status": "active|completed|failed",
-      "reward": {"gold": 0, "xp": 0, "items": ["..."]}
-    }
-  ]
-}
-```
+Common runtime entity types (mapped to ai-gm core `entities[]` shape):
 
-전체 스키마는 Phase 1에서 `schemas/`에 들어갑니다.
+- faction — towns, guilds, nations, militia groups
+- character — PCs, NPCs, mentors, villains
+- province — runtime territorial unit (note: lore file uses `location` chunk type; see gotcha below)
 
-Full schema lives in `schemas/` (Phase 1).
+Lore chunk types (markdown H2 headers):
+
+- character
+- location
+- faction
+- event
+- rule
+- item
+- misc
+
+Critical gotcha: the runtime state entity type for regional geography is `province`, while lore markdown files use `location` as the chunk type. This mismatch is intentional: state uses concise machine-friendly names (`province`), lore uses human-friendly `location` chunks.
+
+Quick mapping for fantasy-rpg:
+
+- party → faction + special attributes (leader_id, members[])
+- spell → item-like reference with school, level, mana_cost
+- quest → event-like structure linked to character and location
+
+Reference: `schemas/README.md` and ai-gm core `schemas/state.json` for full runtime contract.
 
 ---
 
@@ -187,68 +188,289 @@ Full schema lives in `schemas/` (Phase 1).
 
 ```
 ai-gm-fantasy-rpg/
-├── lore/                       # 정적 세계관 + 청크 (Git 추적)
-│   ├── rules/                  # [CHUNK: rules] (장르 공통, 핀 고정)
-│   │   ├── combat.md
-│   │   ├── magic.md
-│   │   ├── exploration.md
-│   │   └── social.md
-│   ├── seeds/                  # 시작 가능한 시드 모음 (각 시드 = 디렉토리)
-│   │   ├── age-of-dragons-1024/   # [CHUNK: seed]
-│   │   │   ├── seed.json       # 시드 정의
-│   │   │   ├── factions/
-│   │   │   ├── characters/
-│   │   │   ├── regions/
-│   │   │   ├── spells/
-│   │   │   └── overview.md
-│   │   └── _template/          # 새 시드 작성용 템플릿
-│   └── _shared/                # 시드 간 공유되는 청크
-│
-├── schemas/                    # 장르 스키마 (Phase 1)
-├── system_prompt.md            # GM 행동 규약
-├── seed_template.json          # 새 시드 작성 가이드
-├── games/                      # (gitignored) 실제 진행 게임
-│   └── .gitkeep
-├── examples/                   # 샘플 트랜스크립트
-│   └── turn-001-arrival.jsonl
+├── lore/
+│   ├── rules/                             # [CHUNK: rule -- <name>] (genre-wide rules)
+│   │   ├── combat.md                      # 5 chunks: melee/ranged, morale, initiative, death, tactics
+│   │   ├── magic.md                       # 5 chunks: schools, mana, casting fatigue, dracomancy, components
+│   │   ├── exploration.md                 # 5 chunks: travel, dungeon, rest, perception, weather
+│   │   └── social.md                      # 5 chunks: reactions, persuasion, reputation, trade, rumors
+│   ├── seeds/
+│   │   └── age-of-dragons-1024/           # canonical sample seed
+│   │       ├── seed.json                  # 18 entities, schema_version 1
+│   │       ├── overview.md                # 5 chunks (1 event + 4 misc)
+│   │       ├── factions/                  # 7 files (faction chunks)
+│   │       ├── characters/                # 5 files (character chunks)
+│   │       └── regions/                   # 6 files (location chunks)
+├── schemas/                               # pointer to core schema + genre notes
+├── system_prompt.md                       # GM behavior guide (detailed, multi-section)
+├── seed_template.json                     # authoring contract for seeds
+├── examples/
+│   └── turn-001-arrival.jsonl             # 12-line demo transcript
+├── tests/                                 # 20 pytest (TDD)
+│   ├── conftest.py                        # fixtures: tmp_games_dir, seed_payload
+│   ├── test_chunk_format.py               # 4 tests: H2 [CHUNK] regex
+│   ├── test_seed_validates.py             # 6 tests: state schema, IDs, cross-refs
+│   ├── test_lore_chunks.py                # 6 tests: rule files, seed files, counts
+│   └── test_e2e_integration.py            # 4 tests: start_game_with_seed, advance_turn, read_lore, history
+├── scripts/
+│   └── manual_qa.py                       # custom round-trip (S1-S8 contract)
+├── games/                                 # (gitignored) runtime games
+├── INSTALL.md
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 🚀 빠른 시작 / Quick Start (목표)
+## 🚀 사용법 (with ai-gm core) / Usage (with ai-gm core)
+
+### 0. 사전 요구사항 / Prerequisites
+
+- Python 3.11+ (3.13 권장)
+- ai-gm 코어 v0.4+ (must include start_game_with_seed)
+- 이 플러그인 (이 repo)
+- (선택) MCP 클라이언트: OpenCode, Claude Code, Hermes
+
+### 1. 설치 / Installation
 
 ```bash
-# 1. 코어 + 이 플러그인 클론 / Clone core + this plugin
 git clone https://github.com/sigco3111/ai-gm.git
 git clone https://github.com/sigco3111/ai-gm-fantasy-rpg.git
+cd ai-gm-fantasy-rpg
 
-# 2. 코어 설치 / Install core
-cd ai-gm && pip install -e ".[dev]" && cd ..
+cd ../ai-gm
+pip install -e ".[dev]"
+cd ../ai-gm-fantasy-rpg
 
-# 3. MCP 서버를 에이전트에 등록 / Register MCP server
-#    (OpenCode / Claude Code / Hermes 설정 — ai-gm/docs/ 참조)
+python -c "from ai_gm.state.validation import validate_and_parse; print('ai-gm OK')"
+python -m pytest tests/ -v   # 20/20 should pass
+```
 
-# 4. 에이전트에게 / Tell your agent:
-#    "Start a new game of ai-gm-fantasy-rpg"
-#    → GM이 "어떤 게임을 플레이하시겠어요?" 라고 물어봄
-#    → The GM will ask "What kind of game do you want to play?"
+### 2. 환경 변수 설정 / Environment variables
+
+- `export AI_GM_PLUGINS_DIR="$(pwd)"`
+- (선택) `export AI_GM_GAMES_DIR="$HOME/.ai-gm-games"`
+- 여러 플러그인: 콜론으로 구분
+
+```bash
+export AI_GM_PLUGINS_DIR="$(pwd)"
+export AI_GM_GAMES_DIR="$HOME/.ai-gm-games"
+mkdir -p "$AI_GM_GAMES_DIR"
+```
+
+### 3. MCP 서버 기동 / Start the MCP server
+
+```bash
+cd ../ai-gm
+python -m ai_gm
+# FastMCP server listens on stdin/stdout JSON-RPC
+```
+
+서버는 다음 도구들을 제공합니다 (코어에 의해 노출됨):
+
+| 도구 | 용도 | 관련 |
+|------|------|------|
+| start_game | direct payload start (legacy) | raw payload injection
+| **start_game_with_seed** | **start by seed_id (recommended)** | preferred entrypoint for this plugin
+| read_state | read current state | per-turn
+| advance_turn | submit event + advance turn | per-turn
+| end_session | compress tiers / end chapter | archival
+| read_lore | get indexed lore chunks | read seed and rule chunks
+| search_history | Tier-3 RAG search | find similar events
+| read_state_history | audit log | debugging / history
+
+### 4. 게임 시작 / Start a game (MCP JSON-RPC 예시)
+
+#### 4.1. start_game_with_seed("age-of-dragons-1024") — 권장
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "tools/call",
+  "params": {
+    "name": "start_game_with_seed",
+    "arguments": { "seed_id": "age-of-dragons-1024" }
+  }
+}
+```
+
+예상 응답(요약):
+
+```json
+{
+  "ok": true,
+  "game_id": "age-of-dragons-1024",
+  "state": { "game_id": "age-of-dragons-1024", "turn": 0, "entities": [ ... 18 entities ... ] },
+  "seed_meta": { "seed_name": "Age of Dragons 1024", "era": "1024 CE", "tone": "high_fantasy", "player_character": "character_lyndwell" },
+  "lore_files_indexed": 24,
+  "lore_chunks_indexed": 43,
+  "world_md_path": "/.../age-of-dragons-1024/world.md"
+}
+```
+
+부팅 시 내부 동작 (요약):
+
+1. `AI_GM_PLUGINS_DIR` 스캔하여 플러그인 목록 로드
+2. `<plugin>/lore/seeds/age-of-dragons-1024/seed.json`을 찾음
+3. `_meta`, `_notes` 같은 비표준 키를 제거
+4. `validate_and_parse("state", payload)` 호출 → 18 entities 검증
+5. `store.create(game_id, state)`로 디스크에 저장
+6. Tier buffers 초기화 (Tier1 verbatim, Tier3 directory)
+7. `lore/rules/*.md` + seed markdown들을 결합해 `world.md` 생성
+8. 43개의 청크가 `read_lore`/`search_history`로 즉시 조회 가능
+
+#### 4.2. start_game (legacy, direct payload)
+
+레거시 호환을 위해 존재하지만, 권장하지 않습니다. `_meta` 제거와 큰 페이로드 관리를 수동으로 해야 합니다.
+
+---
+
+### 5. 첫 턴 플레이 / Play the first turn
+
+`start_game_with_seed` 후 `read_state`로 상태 확인, `advance_turn`으로 이벤트 제출:
+
+```json
+{"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"read_state","arguments":{"game_id":"age-of-dragons-1024"}}}
+```
+
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 5,
+  "method": "tools/call",
+  "params": {
+    "name": "advance_turn",
+    "arguments": {
+      "game_id": "age-of-dragons-1024",
+      "event": {
+        "event_id": "ev-001-approach-lyndwell",
+        "turn": 0,
+        "actor_id": "character_lyndwell",
+        "action": "custom",
+        "payload": { "action_text": "Visit the Adventurer's Guild and read the notice board." },
+        "reason": "Player chooses to gather local quests and rumors."
+      }
+    }
+  }
+}
+```
+
+GM는 도구 결과를 받고 그 결과를 서술로 풀어냅니다. 절대 임의 숫자 금지 — 모든 수치는 도구 호출 결과나 state에서 옵니다.
+
+---
+
+### 6. OpenCode / Claude Code / Hermes에서 사용 / Using with AI agents
+
+OpenCode / Claude Code에 MCP 서버를 등록하는 예시는 strategy-war와 동일합니다. 핵심은 `AI_GM_PLUGINS_DIR`와 `AI_GM_GAMES_DIR`를 올바르게 설정하는 것입니다.
+
+OpenCode 예:
+
+```json
+{
+  "mcpServers": {
+    "ai-gm": {
+      "command": "python",
+      "args": ["-m", "ai_gm"],
+      "cwd": "/path/to/ai-gm",
+      "env": {
+        "AI_GM_PLUGINS_DIR": "/path/to/ai-gm-fantasy-rpg",
+        "AI_GM_GAMES_DIR": "/path/to/games"
+      }
+    }
+  }
+}
+```
+
+에이전트에게 이렇게 말하세요: "Start a new game of ai-gm-fantasy-rpg with the age-of-dragons-1024 seed"
+
+에이전트는 `start_game_with_seed`를 호출하고 이후 `read_state` → `advance_turn` 사이클을 돌립니다.
+
+---
+
+### 7. 수동 QA (개발자용) / Manual QA (for developers)
+
+플러그인의 자체 `scripts/manual_qa.py`를 사용해 round-trip을 검증할 수 있습니다:
+
+```bash
+PYTHONPATH="../ai-gm/src" python scripts/manual_qa.py 2>&1 | tee /tmp/manual_qa_fantasy.log
+```
+
+이 스크립트는 S1–S8 계약의 여러 round-trips를 실행하여 `start_game_with_seed` → `read_lore` → `advance_turn` 흐름을 검증합니다.
+
+---
+
+### 8. 자신만의 시드 작성 / Author your own seed
+
+`lore/seeds/`에서 `age-of-dragons-1024/` 템플릿을 복사하여 새 시드를 작성하세요. 최소 요구사항:
+
+- `seed.json` — state-shape JSON, `schema_version: 1`, `game_id` 필드
+- `overview.md` — 1페이지 서사 (선택적 chunk 헤더 ok)
+- `factions/`, `characters/`, `regions/` — 각각의 청크 파일들은 `## [CHUNK: TYPE -- NAME]` 형식을 따라야 함
+
+중요: 청크 헤더는 정확히 `## [CHUNK: TYPE -- NAME]` 형식을 따라야 합니다. TYPE은 `character|location|faction|event|rule|item|misc` 중 하나여야 합니다.
+
+`seed_id` 형식 제한: ASCII 소문자, 숫자, `-` 및 `_` 만 사용. (한국어는 `name` 필드에만 허용)
+
+예: `age-of-dragons-1024`, `lost-mines-1187`, `black-tower-892`
+
+테스트: `PYTHONPATH="../ai-gm/src" python -m pytest tests/ -v` — 20/20 통과를 목표로 하세요.
+
+---
+
+### 9. 디버깅 팁 / Debugging tips
+
+- 시드를 못 찾을 때: `AI_GM_PLUGINS_DIR`가 올바른지 확인, `lore/seeds/<seed_id>/seed.json` 존재 확인, `game_id`가 디렉터리 이름과 일치하는지 확인
+- 검증 실패: `tests/test_seed_validates.py`를 실행하면 정확한 위반 정보가 출력됩니다
+- lore 청크가 보이지 않을 때: `seed.json`의 `game_id`와 요청한 `seed_id`가 대소문자까지 일치해야 합니다
+- 청크 포맷 오류: H2 헤더 `## [CHUNK: TYPE -- NAME]` 형식 확인
+- state vs lore 용어 혼동: state entity type은 `province`, lore chunk type은 `location`입니다. (중요)
+
+---
+
+### 10. 통합 테스트 / Running the integration tests
+
+```bash
+cd ../ai-gm-fantasy-rpg
+PYTHONPATH="../ai-gm/src" python -m pytest tests/ -v
+```
+
+**예상 출력 (20 passed):**
+
+```
+tests/test_chunk_format.py::test_chunk_header_regex_matches_valid_header PASSED
+tests/test_chunk_format.py::test_chunk_header_regex_rejects_malformed_header PASSED
+tests/test_chunk_format.py::test_chunk_header_regex_tolerates_em_dash_separator PASSED
+tests/test_chunk_format.py::test_sample_fixture_chunks_to_one_lorechunk PASSED
+tests/test_seed_validates.py::test_seed_json_validates_against_state_schema PASSED
+tests/test_seed_validates.py::test_seed_template_json_validates PASSED
+tests/test_seed_validates.py::test_seed_entity_ids_match_strict_pattern PASSED
+tests/test_seed_validates.py::test_seed_cross_references_resolve PASSED
+tests/test_seed_validates.py::test_seed_faction_stats_and_resources_in_range PASSED
+tests/test_lore_chunks.py::test_all_rules_md_files_chunk PASSED
+tests/test_lore_chunks.py::test_seed_overview_produces_four_or_more_chunks PASSED
+tests/test_lore_chunks.py::test_all_seed_faction_files_chunk PASSED
+tests/test_lore_chunks.py::test_all_seed_region_files_chunk PASSED
+tests/test_lore_chunks.py::test_all_seed_character_files_chunk PASSED
+tests/test_lore_chunks.py::test_total_lore_chunk_count_is_at_least_43 PASSED
+tests/test_e2e_integration.py::test_e2e_start_game_from_seed_creates_state_file PASSED
+tests/test_e2e_integration.py::test_e2e_advance_first_turn_succeeds PASSED
+tests/test_e2e_integration.py::test_e2e_read_lore_finds_kargad_chunk PASSED
+tests/test_e2e_integration.py::test_e2e_read_state_history_shows_audit PASSED
+20 passed in 0.35s
 ```
 
 ---
 
 ## 🎲 게임플레이 루프 / Gameplay Loop (per turn)
 
-1. **플레이어 입력** — 자유 자연어 (예: "마을 광장의 의뢰 게시판부터 본다" / "동쪽 숲 속 오크 무리를 추적한다")
-2. **GM 컨텍스트 조회** — Tier 1 (최근 턴) + Tier 2 (활성 퀘스트, 파티 상태) + Tier 3 (관련 lore RAG)
-3. **GM 도구 호출** — `move_party`, `attack`, `cast_spell`, `complete_quest`, `advance_turn` 등
-4. **GM 서술** — 도구 결과를 바탕으로 묘사, **절대 임의 주사위/숫자 ❌** (도구가 결정)
-5. **턴 종료** — 트랜스크립트 저장, 필요 시 자동 요약 트리거
+1. 플레이어 입력 — 자유 자연어 (예: "샐로우스톤 광장에서 의뢰 게시판을 확인한다" / "용이 머무는 봉우리를 정찰한다")
+2. GM 컨텍스트 조회 — Tier 1 (최근 턴) + Tier 2 (활성 퀘스트·파티 상태) + Tier 3 (lore RAG)
+3. GM 도구 호출 — `read_state`, `read_lore`, `advance_turn`, `move_party`, `cast_spell`, `resolve_combat` 등
+4. GM 서술 — 도구 결과를 바탕으로 서술, **절대 임의 숫자/주사위 금지**
+5. 턴 종료 — 트랜스크립트 저장, 필요 시 자동 요약 트리거
 
-**No silent fixes.** 도구 실패 시 GM은 플레이어에게 정직하게 알리고 대기.
-
-**No silent fixes.** If a tool fails, the GM tells the player honestly and waits for input.
+No silent fixes. 도구 실패나 검증 오류는 플레이어에게 즉시 보고됩니다.
 
 ---
 
@@ -256,87 +478,37 @@ cd ai-gm && pip install -e ".[dev]" && cd ..
 
 | Phase | 범위 / Scope | 상태 / Status |
 |-------|-------------|------------|
-| **0. 계획** | 아키텍처, README, 시드 시스템 설계 | ✅ 진행 중 |
-| **1. 시드 시스템** | `seed_template.json` + `lore/seeds/age-of-dragons-1024/` (샘플 1개) | 🔜 다음 |
-| **2. 스키마** | 장르별 JSON 스키마 (ai-gm 코어에 등록) | 🔜 다음 |
-| **3. 샘플 시드 2~3** | 시드 옵션 확장 (예: 동양풍 검협, 다크 판타지 등) | ⏳ |
-| **4. 시드 빌더 도구** | `start_game` MCP 도구 + 대화형 설정 UI | ⏳ |
-| **5. 샘플 플레이** | 50턴 진행 가능한 샘플 | ⏳ |
+| **0. 계획** | 아키텍처, README, 시드 시스템 설계 | ✅ 완료 |
+| **1. 시드 시스템** | `seed_template.json` + `lore/seeds/age-of-dragons-1024/` (샘플 1개) + 20 tests | ✅ 완료 |
+| **2. 스키마 통합** | ai-gm core `start_game_with_seed` 통합 | ✅ 완료 |
+| **3. 더 많은 샘플 시드** | 추가 시드(동양풍, 다크 판타지 등) | ⏳ 진행 중 |
+| **4. 파티 시스템** | 멀티 캐릭터 파티 로직, 파티 관리 UI | ⏳ 예정 |
+| **5. 샘플 플레이** | 50턴 예시 플레이 스크립트 | ⏳ 예정 |
+| **6. NPC 자율성** | NPC 파벌의 자율 의사결정 & 이벤트 생성 | ⏳ 예정 |
 
 ---
 
 ## 🎨 톤 & 영감 / Tone & Inspiration
 
-고전 D&D풍 판타지가 **기본 톤**이지만, 시드에서 다른 톤을 지정하면 GM이 그대로 따릅니다.
+기본 톤은 고전 D&D풍의 하이 판타지(영웅 서사)입니다. 그러나 각 시드에서 톤을 지정하면 GM이 그 톤을 따릅니다.
 
-- **D&D 5e / Pathfinder 2e** — 클래스, 레벨, 주문 체계
-- **Baldur's Gate 3** — 대화·관계·도덕적 선택
-- **Elden Ring** — 세계 분위기, 환경 서술
+- D&D 5e / Pathfinder 2e — 클래스·레벨·주문 구조
+- Baldur's Gate 3 — 대화·관계 기반 선택
+- Elden Ring — 환경과 암시로 분위기 전달
 
-**플레이어 권리가 최우선입니다.** GM은 플레이어 입력 없이 플롯을 진행하지 않습니다. 세계는 *반응*하지 *추진*하지 않습니다.
-
-**Classic D&D-flavored fantasy is the *default* tone** — but if you pick a different tone in the seed, the GM follows your lead.
-
-- **D&D 5e / Pathfinder 2e** — class, level, spell systems
-- **Baldur's Gate 3** — dialogue, relationships, moral choices
-- **Elden Ring** — world atmosphere, environmental storytelling
-
-**Player agency is paramount.** The GM does not advance the plot without player input. The world *reacts*; it does not *push*.
+플레이어 권리가 최우선입니다. GM은 플레이어 입력 없이 플롯을 강제로 진행하지 않습니다.
 
 ---
 
 ## 📚 함께 보기 / See Also
 
-- [`sigco3111/ai-gm`](https://github.com/sigco3111/ai-gm) — 공통 엔진 / shared engine
-- [`sigco3111/ai-gm-strategy-war`](https://github.com/sigco3111/ai-gm-strategy-war) — 장르 1: 전략/전쟁 / Genre 1: strategy/war
-- (장르 3) `sigco3111/ai-gm-sci-fi-explore`
-- (장르 4) `sigco3111/ai-gm-mystery-detective`
-- [ai-gm-architecture.md](https://gist.github.com/sigco3111/) — 풀 디자인 문서 (한글) / full design doc (Korean)
+- [INSTALL.md](INSTALL.md) — LLM-agent friendly install guide (curl)
+- [`sigco3111/ai-gm`](https://github.com/sigco3111/ai-gm) — core engine (v0.4+)
+- Sibling plugins:
+  - [`sigco3111/ai-gm-strategy-war`](https://github.com/sigco3111/ai-gm-strategy-war)
+  - [`sigco3111/ai-gm-sci-fi-explore`](https://github.com/sigco3111/ai-gm-sci-fi-explore)
+  - [`sigco3111/ai-gm-mystery-detective`](https://github.com/sigco3111/ai-gm-mystery-detective)
 
 ## 📄 라이선스 / License
 
 Apache 2.0 — see [LICENSE](LICENSE).
-
----
-
-## 🐉 Sample Seed — `age-of-dragons-1024`
-
-A canonical seed ships with this plugin, ready to play:
-
-| Field | Value |
-|---|---|
-| **Game ID** | `age-of-dragons-1024` |
-| **Era** | 1024 CE — dragons return after 3 centuries of absence |
-| **Tone** | high_fantasy |
-| **Player Character** | Lyndwell, a 22-year-old graduate of the Silver Conclave |
-| **Player Faction** | `faction_shallowstone_defenders` |
-| **Antagonist** | Kargad the Red Wyrm, an 842-year-old ancient red dragon |
-| **Entities** | 7 factions, 5 characters, 6 provinces (18 total) |
-| **Lore chunks** | 43 (4 rules + 5 overview + 7 factions + 6 regions + 5 characters) |
-| **State schema** | schema_version 1 (matches ai-gm core) |
-
-**To start a game with this seed**:
-
-```python
-# via the MCP server
-result = start_game_with_seed(seed_id="age-of-dragons-1024")
-# → returns state + 43 indexed chunks, no manual payload assembly required
-```
-
-**Round-trip verified**: 20/20 pytest + manual_qa round-trip both green. See `scripts/manual_qa.py`.
-
-## ✅ Phase 1 Status (complete)
-
-- [x] Phase 0 — initial commit (skeleton + planning README)
-- [x] Phase 1 — content parity with `ai-gm-strategy-war`
-  - [x] `seed_template.json` (96 lines, fantasy-rpg genre)
-  - [x] `system_prompt.md` (218 lines, 10 sections)
-  - [x] `INSTALL.md` (375 lines, LLM-agent-friendly)
-  - [x] `schemas/README.md` (points to core schema)
-  - [x] `lore/rules/` — 4 rule files (combat, magic, exploration, social), 20 chunks
-  - [x] `lore/seeds/age-of-dragons-1024/` — seed.json + overview.md + 18 entity files
-  - [x] `examples/turn-001-founding.jsonl` — 12-line demo transcript
-  - [x] `tests/` — 20 tests across 4 files (pytest, all pass)
-  - [x] `scripts/manual_qa.py` — end-to-end round-trip (passes)
-
-**Phase 2+ (future)**: balanced stat blocks, encounter tables, additional sample seeds, integration with the ai-gm monorepo CI.
