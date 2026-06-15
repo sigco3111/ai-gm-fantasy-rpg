@@ -1,0 +1,96 @@
+{
+  "_about": "seed_template.json — author contract for new seeds for the ai-gm-fantasy-rpg plugin. Copy to lore/seeds/<your-seed>/seed.json, fill in entities (factions, characters, provinces), and strip the _about / _meta / _notes keys before passing to start_game. See schemas/README.md for the Option A mapping that explains why this file looks the way it does. Example seed id: age-of-dragons-1024.",
+
+  "_meta": {
+    "seed_name": "Age of Dragons 1024",
+    "era": "1024 CE (Age of Dragons — dragons return after 3 centuries of absence)",
+    "tone": "high_fantasy",
+    "scale": "medium",
+    "player_nation_id": "faction_shallowstone_defenders",
+    "lore_overview": "overview.md",
+    "game_start_date": "1024 CE, Late Spring"
+  },
+
+  "_notes": [
+    "1. All entity ids MUST match the pattern ^[a-z0-9_-]+$ (lowercase, digits, hyphen, underscore).",
+    "2. Names go in the 'name' field, NOT in the id.",
+    "3. game_id must be globally unique across all games. Convention: <seed-name>-<era>, e.g. 'age-of-dragons-1024'.",
+    "4. Cross-references (ruler_id, controller_id, location_id) MUST reference an existing entity id in this file. The validator will reject dangling references.",
+    "5. attributes.stats.* values MUST be in [0, 100]. attributes.resources.* values are non-negative integers.",
+    "6. attributes.diplomatic_relations maps <other_faction_id> to an integer in [-100, +100]. Omit pairs that are not relevant.",
+    "7. Strip _about, _meta, _notes before passing to start_game. The ai-gm core's validate_and_parse('state', ...) will reject unknown top-level keys.",
+    "8. seed.json must validate against schemas/state.json (schema_version must equal 1).",
+    "9. Optional entity types: 'unit' (military formation), 'resource' (a single resource node). Used less often; included in core schema for completeness."
+  ],
+
+  "game_id": "age-of-dragons-1024",
+  "schema_version": 1,
+  "turn": 0,
+  "created_at": "<ISO-8601 UTC, e.g. '2026-06-15T00:00:00Z'>",
+  "event_log": [],
+  "entities": [
+    {
+      "_example_type": "faction (a nation or major political entity)",
+
+      "id": "faction_shallowstone_defenders",
+      "type": "faction",
+      "name": "샬로우스톤 수호자 (Shallowstone Defenders)",
+      "attributes": {
+        "government": "monarchy",
+        "ruler_id": "character_lyndwell",
+        "stats": {
+          "economy": 0,
+          "military": 0,
+          "stability": 0,
+          "legitimacy": 0
+        },
+        "resources": {
+          "gold": 0,
+          "food": 0,
+          "iron": 0
+        },
+        "modifiers": [
+          "recently-enthroned"
+        ],
+        "diplomatic_relations": {
+          "<other_faction_id>": 0
+        }
+      }
+    },
+
+    {
+      "_example_type": "character (a named individual: ruler, general, advisor, envoy)",
+
+      "id": "character_lyndwell",
+      "type": "character",
+      "name": "린드웰 (Lyndwell)",
+      "attributes": {
+        "age": 22,
+        "traits": [
+          "young-mage",
+          "curious"
+        ],
+        "location_id": "province_shallowstone",
+        "loyalty": 75
+      }
+    },
+
+    {
+      "_example_type": "province (a map region: capital, city, strategic zone)",
+
+      "id": "province_shallowstone",
+      "type": "province",
+      "name": "샬로우스톤 (Shallowstone)",
+      "attributes": {
+        "population": 10000,
+        "controller_id": "faction_shallowstone_defenders",
+        "terrain": "hills",
+        "resource_yields": {
+          "gold": 10,
+          "food": 20,
+          "iron": 5
+        }
+      }
+    }
+  ]
+}
