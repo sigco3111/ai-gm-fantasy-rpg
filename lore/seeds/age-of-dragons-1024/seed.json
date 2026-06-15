@@ -1,0 +1,453 @@
+{
+  "game_id": "age-of-dragons-1024",
+  "schema_version": 1,
+  "turn": 0,
+  "created_at": "2026-06-15T00:00:00Z",
+  "event_log": [],
+  "entities": [
+    {
+      "id": "faction_shallowstone_defenders",
+      "type": "faction",
+      "name": "샬로우스톤 수호자 (Shallowstone Defenders)",
+      "attributes": {
+        "government": "militia",
+        "ruler_id": "character_captain_bren",
+        "stats": {
+          "economy": 30,
+          "military": 55,
+          "stability": 50,
+          "legitimacy": 60
+        },
+        "resources": {
+          "gold": 200,
+          "food": 800,
+          "iron": 150
+        },
+        "modifiers": [
+          "recently-raided",
+          "desperate",
+          "player-aligned"
+        ],
+        "diplomatic_relations": {}
+      }
+    },
+    {
+      "id": "faction_lyondell_realm",
+      "type": "faction",
+      "name": "리온델 왕국 (Lyondell Kingdom)",
+      "attributes": {
+        "government": "monarchy",
+        "ruler_id": "character_king_thane_lyondell",
+        "stats": {
+          "economy": 75,
+          "military": 60,
+          "stability": 55,
+          "legitimacy": 70
+        },
+        "resources": {
+          "gold": 2000,
+          "food": 5000,
+          "iron": 800
+        },
+        "modifiers": [
+          "dragon-strained",
+          "royal-bereaved"
+        ],
+        "diplomatic_relations": {
+          "faction_shallowstone_defenders": 40,
+          "faction_silver_conclave": 20,
+          "faction_free_cities_league": 30,
+          "faction_black_iron_legion": 10,
+          "faction_duskwood_court": 0,
+          "faction_dragonclaw_horde": -90
+        }
+      }
+    },
+    {
+      "id": "faction_dragonclaw_horde",
+      "type": "faction",
+      "name": "용발톱 무리 (Dragonclaw Horde)",
+      "attributes": {
+        "government": "horde",
+        "ruler_id": "character_kargad_red_wyrm",
+        "stats": {
+          "economy": 40,
+          "military": 90,
+          "stability": 65,
+          "legitimacy": 75
+        },
+        "resources": {
+          "gold": 1500,
+          "food": 2000,
+          "iron": 300
+        },
+        "modifiers": [
+          "dragon-led",
+          "expansionist",
+          "fire-aspected"
+        ],
+        "diplomatic_relations": {
+          "faction_shallowstone_defenders": -90,
+          "faction_lyondell_realm": -90,
+          "faction_silver_conclave": -50,
+          "faction_duskwood_court": -30,
+          "faction_black_iron_legion": -10,
+          "faction_free_cities_league": -70
+        }
+      }
+    },
+    {
+      "id": "faction_silver_conclave",
+      "type": "faction",
+      "name": "은빛 결사 (Silver Conclave)",
+      "attributes": {
+        "government": "magocracy",
+        "ruler_id": "character_archmage_silvana",
+        "stats": {
+          "economy": 65,
+          "military": 45,
+          "stability": 85,
+          "legitimacy": 80
+        },
+        "resources": {
+          "gold": 1200,
+          "food": 1500,
+          "iron": 200
+        },
+        "modifiers": [
+          "scholarly",
+          "dragon-researchers",
+          "neutral"
+        ],
+        "diplomatic_relations": {
+          "faction_lyondell_realm": 20,
+          "faction_shallowstone_defenders": 30,
+          "faction_dragonclaw_horde": -50,
+          "faction_duskwood_court": 10,
+          "faction_black_iron_legion": 0,
+          "faction_free_cities_league": 15
+        }
+      }
+    },
+    {
+      "id": "faction_duskwood_court",
+      "type": "faction",
+      "name": "황혼숲 궁정 (Duskwood Court)",
+      "attributes": {
+        "government": "fey_court",
+        "ruler_id": null,
+        "stats": {
+          "economy": 50,
+          "military": 60,
+          "stability": 75,
+          "legitimacy": 85
+        },
+        "resources": {
+          "gold": 800,
+          "food": 2000,
+          "iron": 50
+        },
+        "modifiers": [
+          "fey-pact-bound",
+          "ancient",
+          "isolationist"
+        ],
+        "diplomatic_relations": {
+          "faction_silver_conclave": 10,
+          "faction_lyondell_realm": 0,
+          "faction_dragonclaw_horde": -30,
+          "faction_shallowstone_defenders": 5,
+          "faction_black_iron_legion": -20,
+          "faction_free_cities_league": -10
+        }
+      }
+    },
+    {
+      "id": "faction_black_iron_legion",
+      "type": "faction",
+      "name": "검은철 군단 (Black Iron Legion)",
+      "attributes": {
+        "government": "mercenary_company",
+        "ruler_id": null,
+        "stats": {
+          "economy": 55,
+          "military": 80,
+          "stability": 50,
+          "legitimacy": 30
+        },
+        "resources": {
+          "gold": 2500,
+          "food": 1000,
+          "iron": 1500
+        },
+        "modifiers": [
+          "for-hire",
+          "ruthless",
+          "well-equipped"
+        ],
+        "diplomatic_relations": {
+          "faction_lyondell_realm": 10,
+          "faction_dragonclaw_horde": -10,
+          "faction_silver_conclave": 0,
+          "faction_shallowstone_defenders": 0,
+          "faction_duskwood_court": -20,
+          "faction_free_cities_league": -10
+        }
+      }
+    },
+    {
+      "id": "faction_free_cities_league",
+      "type": "faction",
+      "name": "자유도시 연맹 (Free Cities League)",
+      "attributes": {
+        "government": "league",
+        "ruler_id": null,
+        "stats": {
+          "economy": 90,
+          "military": 40,
+          "stability": 70,
+          "legitimacy": 60
+        },
+        "resources": {
+          "gold": 4000,
+          "food": 3000,
+          "iron": 600
+        },
+        "modifiers": [
+          "merchant-republics",
+          "trade-focused",
+          "non-aligned"
+        ],
+        "diplomatic_relations": {
+          "faction_lyondell_realm": 30,
+          "faction_silver_conclave": 15,
+          "faction_shallowstone_defenders": 20,
+          "faction_black_iron_legion": -10,
+          "faction_duskwood_court": -10,
+          "faction_dragonclaw_horde": -70
+        }
+      }
+    },
+    {
+      "id": "character_lyndwell",
+      "type": "character",
+      "name": "린드웰 (Lyndwell)",
+      "attributes": {
+        "age": 22,
+        "traits": [
+          "young-mage",
+          "curious",
+          "idealistic",
+          "talented-but-untested"
+        ],
+        "location_id": "province_shallowstone",
+        "loyalty": 85,
+        "modifiers": [
+          "player-character",
+          "silver-conclave-graduate"
+        ]
+      }
+    },
+    {
+      "id": "character_captain_bren",
+      "type": "character",
+      "name": "캡틴 브렌 (Captain Bren)",
+      "attributes": {
+        "age": 45,
+        "traits": [
+          "veteran",
+          "gruff",
+          "loyal",
+          "tactically-prudent"
+        ],
+        "location_id": "province_shallowstone",
+        "loyalty": 95,
+        "modifiers": [
+          "town-guard-captain"
+        ]
+      }
+    },
+    {
+      "id": "character_kargad_red_wyrm",
+      "type": "character",
+      "name": "카르가드 붉은 용 (Kargad the Red Wyrm)",
+      "attributes": {
+        "age": 842,
+        "traits": [
+          "ancient",
+          "cruel",
+          "intelligent",
+          "fire-aspected",
+          "territorial"
+        ],
+        "location_id": "province_dragonmount",
+        "loyalty": 100,
+        "modifiers": [
+          "antagonist",
+          "ancient-red-dragon",
+          "breath-weapon-fire"
+        ]
+      }
+    },
+    {
+      "id": "character_archmage_silvana",
+      "type": "character",
+      "name": "대마법사 실바나 (Archmage Silvana)",
+      "attributes": {
+        "age": 312,
+        "traits": [
+          "ancient-elven",
+          "scholarly",
+          "patient",
+          "farsighted"
+        ],
+        "location_id": "province_silver_tower",
+        "loyalty": 80,
+        "modifiers": [
+          "conclave-leader",
+          "mentor-figure"
+        ]
+      }
+    },
+    {
+      "id": "character_king_thane_lyondell",
+      "type": "character",
+      "name": "왕 세인 리온델 (King Thane of Lyondell)",
+      "attributes": {
+        "age": 50,
+        "traits": [
+          "weary",
+          "diplomatic",
+          "grieving",
+          "duty-bound"
+        ],
+        "location_id": "province_lyondell_city",
+        "loyalty": 70,
+        "modifiers": [
+          "royal-bereaved",
+          "dragon-war-veteran"
+        ]
+      }
+    },
+    {
+      "id": "province_shallowstone",
+      "type": "province",
+      "name": "샬로우스톤 (Shallowstone)",
+      "attributes": {
+        "population": 12000,
+        "controller_id": "faction_shallowstone_defenders",
+        "terrain": "hills",
+        "resource_yields": {
+          "gold": 30,
+          "food": 300,
+          "iron": 50
+        },
+        "modifiers": [
+          "recently-raided",
+          "fortified",
+          "frontier-town"
+        ]
+      }
+    },
+    {
+      "id": "province_lyondell_city",
+      "type": "province",
+      "name": "리온델 시 (Lyondell City)",
+      "attributes": {
+        "population": 200000,
+        "controller_id": "faction_lyondell_realm",
+        "terrain": "plains",
+        "resource_yields": {
+          "gold": 500,
+          "food": 2000,
+          "iron": 200
+        },
+        "modifiers": [
+          "capital",
+          "walled",
+          "trade-hub"
+        ]
+      }
+    },
+    {
+      "id": "province_duskwood",
+      "type": "province",
+      "name": "황혼숲 (Duskwood)",
+      "attributes": {
+        "population": 5000,
+        "controller_id": "faction_duskwood_court",
+        "terrain": "forest",
+        "resource_yields": {
+          "gold": 50,
+          "food": 400,
+          "iron": 20
+        },
+        "modifiers": [
+          "ancient-forest",
+          "fey-controlled",
+          "mystical"
+        ]
+      }
+    },
+    {
+      "id": "province_dragonmount",
+      "type": "province",
+      "name": "용산 (Dragonmount)",
+      "attributes": {
+        "population": 500,
+        "controller_id": "faction_dragonclaw_horde",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 200,
+          "food": 50,
+          "iron": 300
+        },
+        "modifiers": [
+          "volcanic",
+          "dragon-lair",
+          "scorched"
+        ]
+      }
+    },
+    {
+      "id": "province_silver_tower",
+      "type": "province",
+      "name": "은빛 탑 (Silver Tower)",
+      "attributes": {
+        "population": 2000,
+        "controller_id": "faction_silver_conclave",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 100,
+          "food": 200,
+          "iron": 50
+        },
+        "modifiers": [
+          "arcane-academy",
+          "isolated",
+          "magically-shielded"
+        ]
+      }
+    },
+    {
+      "id": "province_black_iron_stronghold",
+      "type": "province",
+      "name": "검은철 요새 (Black Iron Stronghold)",
+      "attributes": {
+        "population": 8000,
+        "controller_id": "faction_black_iron_legion",
+        "terrain": "plains",
+        "resource_yields": {
+          "gold": 150,
+          "food": 500,
+          "iron": 800
+        },
+        "modifiers": [
+          "mercenary-fortress",
+          "industrial",
+          "well-defended"
+        ]
+      }
+    }
+  ]
+}
