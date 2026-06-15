@@ -5,7 +5,8 @@
 
 [![Genre](https://img.shields.io/badge/genre-fantasy%20rpg-purple)](#🎮-새-게임을-시작하세요)
 [![Depends on](https://img.shields.io/badge/depends%20on-ai--gm-blue)](#요구사항)
-[![Status](https://img.shields.io/badge/status-MVP%20planning-yellow)](#로드맵)
+[![Status](https://img.shields.io/badge/status-Phase%201%20complete-brightgreen)](#-로드맵)
+[![Tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](#-테스트)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](#라이선스)
 
 ---
@@ -295,3 +296,47 @@ cd ai-gm && pip install -e ".[dev]" && cd ..
 ## 📄 라이선스 / License
 
 Apache 2.0 — see [LICENSE](LICENSE).
+
+---
+
+## 🐉 Sample Seed — `age-of-dragons-1024`
+
+A canonical seed ships with this plugin, ready to play:
+
+| Field | Value |
+|---|---|
+| **Game ID** | `age-of-dragons-1024` |
+| **Era** | 1024 CE — dragons return after 3 centuries of absence |
+| **Tone** | high_fantasy |
+| **Player Character** | Lyndwell, a 22-year-old graduate of the Silver Conclave |
+| **Player Faction** | `faction_shallowstone_defenders` |
+| **Antagonist** | Kargad the Red Wyrm, an 842-year-old ancient red dragon |
+| **Entities** | 7 factions, 5 characters, 6 provinces (18 total) |
+| **Lore chunks** | 43 (4 rules + 5 overview + 7 factions + 6 regions + 5 characters) |
+| **State schema** | schema_version 1 (matches ai-gm core) |
+
+**To start a game with this seed**:
+
+```python
+# via the MCP server
+result = start_game_with_seed(seed_id="age-of-dragons-1024")
+# → returns state + 43 indexed chunks, no manual payload assembly required
+```
+
+**Round-trip verified**: 20/20 pytest + manual_qa round-trip both green. See `scripts/manual_qa.py`.
+
+## ✅ Phase 1 Status (complete)
+
+- [x] Phase 0 — initial commit (skeleton + planning README)
+- [x] Phase 1 — content parity with `ai-gm-strategy-war`
+  - [x] `seed_template.json` (96 lines, fantasy-rpg genre)
+  - [x] `system_prompt.md` (218 lines, 10 sections)
+  - [x] `INSTALL.md` (375 lines, LLM-agent-friendly)
+  - [x] `schemas/README.md` (points to core schema)
+  - [x] `lore/rules/` — 4 rule files (combat, magic, exploration, social), 20 chunks
+  - [x] `lore/seeds/age-of-dragons-1024/` — seed.json + overview.md + 18 entity files
+  - [x] `examples/turn-001-founding.jsonl` — 12-line demo transcript
+  - [x] `tests/` — 20 tests across 4 files (pytest, all pass)
+  - [x] `scripts/manual_qa.py` — end-to-end round-trip (passes)
+
+**Phase 2+ (future)**: balanced stat blocks, encounter tables, additional sample seeds, integration with the ai-gm monorepo CI.
