@@ -15,7 +15,7 @@ A single sword has no answer for this. character_seol_muyeong begins the season 
 
 character_seol_muyeong is twenty-two, a junior disciple of faction_white_cloud_sword_sect, and the last of his line. Three moons past, raiders from the cult burned the White Cloud compound to its foundation stones. His shifu fell holding the inner hall. The sect's elders have scattered; the survivors — a handful of wounded brothers and sisters — cling to a mountain outpost near province_cheongpungseong, calling it still the "main hall" though it is a stone hut with a torn banner.
 
-Seol Muyeong practices the sect's foundational sword forms (白雲三十二劍) at the edge of his ability, with a touch of inner-cultivation at the threshold of qi-sensing. He is not a prodigy; he is a young man whose pride has been broken in fire. He carries a single-edge jian his master gave him on the night of his naming day, a thread of plain red cloth tied at the pommel, and a sealed letter he has never read.
+Seol Muyeong practices the sect's foundational sword forms (백운삼십이검) at the edge of his ability, with a touch of inner-cultivation at the threshold of qi-sensing. He is not a prodigy; he is a young man whose pride has been broken in fire. He carries a single-edge jian his master gave him on the night of his naming day, a thread of plain red cloth tied at the pommel, and a sealed letter he has never read.
 
 In province_cheongpungseong he meets character_chae_seobang, the silver-tongued guildmaster of the Celestial Jade Guests. The jade guests have no flag and no doctrine, only a price list and an unmatched memory for debts. Whether the player accepts a contract, walks past, or ends up drugged in a back room is a first test of temperament.
 
@@ -37,7 +37,7 @@ Each faction name above maps to a seed entity id so the narrative remains connec
 
 ## [CHUNK: misc -- The World at a Glance]
 
-The year is 1508 of the Dawoon (大雲) calendar, late spring. The empire's banner still flutters over walled cities, but in the rivers and on the roads, the orthodox sects are the law most people obey. Cities like province_cheongpungseong keep watch-fires lit at night; mountain halls like province_wudang_mountain train in near-silence; bandits shelter in province_blood_sword_forest and pretend they are not afraid.
+The year is 1508 of the Dawoon (대운) calendar, late spring. The empire's banner still flutters over walled cities, but in the rivers and on the roads, the orthodox sects are the law most people obey. Cities like province_cheongpungseong keep watch-fires lit at night; mountain halls like province_wudang_mountain train in near-silence; bandits shelter in province_blood_sword_forest and pretend they are not afraid.
 
 Inner cultivation (내공) is a real and rare force. A handful of grandmasters can split a stone with a palm, sense an enemy at twenty paces, or walk a snowy ridge barefoot without leaving a print. Most martial artists, including the player, are nowhere near that level — they are young men and women with steady hands, decent breath-work, and a long road ahead. The gap between a disciple and a grandmaster is not just skill; it is years of patient, often painful, practice.
 

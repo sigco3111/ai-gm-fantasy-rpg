@@ -6,7 +6,7 @@ Nangong Soyeong is seventy-three and moves with the quiet of an old bell.
 He is the recognized patriarch of faction_wudang_sect and resident of province_wudang_mountain.
 He wears thin robes threaded with calligraphy and a simple iron ring that once belonged to his master.
 He studies maps of rivers and rites as carefully as he studies blade angles.
-His cultivation is a measured internal art that he calls 天心守護, a patient binding of breath and intent.
+His cultivation is a measured internal art that he calls 천심수호, a patient binding of breath and intent.
 He teaches that the world bends slowly, and one must wait for strength to ripen.
 He keeps a small ledger of apprentices, their faults, and the stories that redeemed them.
 He is patient to the point of maddening slowness to younger men.
@@ -19,7 +19,7 @@ His virtues are patience, foresight, and the ability to forgive mistakes that ot
 His flaw is a private stubbornness that sometimes becomes moral inflexibility.
 He once led a mediation between faction_shaolin_temple and a minor sword-house and brought both to tears with a parable.
 He values lineage and teaches that the line of a technique is as important as the technique itself.
-He favors the sect technique of 太和內功 and has taught it to a chosen few.
+He favors the sect technique of 태화내공 and has taught it to a chosen few.
 He is unlikely to send students into open war, preferring diplomacy and slow training instead.
 He keeps a shrine to those who gave their lives sealing the demon long ago.
 He fears that the old seals were never whole and that the cost to remake them will be terrible.
@@ -36,7 +36,7 @@ He has debts of his own: a failed disciple who became a bandit and haunts the ri
 He keeps letters from character_chae_seobang in a locked box, unread unless necessity demands it.
 He worries that faction_huashan_sect's hunger for prestige will bring reckless swords near Wudang's slopes.
 He believes faction_shaolin_temple and faction_wudang_sect should speak more often and writes to the abbot.
-He has a technique he calls 盤龍步, a footwork that traces a circle like a slow-dragon coil.
+He has a technique he calls 반용보, a footwork that traces a circle like a slow-dragon coil.
 He has a simple rosary tucked under his sleeve he fingers when making difficult choices.
 He values stories because they are the scaffolding of community and policy.
 He will risk a diplomatic walk to province_shaolin_temple to keep lines open.

@@ -6,7 +6,7 @@ Macheonbaek is sixty-seven, and the cult's elder moves with a slow, deliberate s
 He rules faction_heavenly_demon_cult from province_heavenly_demon_palace with an iron patience.
 His face is lined by ritual scars and a calm that hints at old hunger.
 He was present when the original seal was hammered into place fifty years ago, or so the rumors claim.
-He cultivates a cold inner art called 玄冥真气 that stains metal with a faint dark bloom.
+He cultivates a cold inner art called 현명진기 that stains metal with a faint dark bloom.
 He is said to have learned parts of it from things in the dark between worlds.
 He wears a ring of carved bone and keeps a vial of blood-oil under his robes for ceremonies.
 He speaks softly and makes others speak louder around him, a studied tactic.
@@ -49,7 +49,7 @@ He wants to complete a rite that will secure the cult's place beyond the old sea
 He will test character_seol_muyeong as a matter of course if the young swordsman interferes with a design.
 He is patient enough to let a hero become arrogant and break himself on his own pride.
 He is clever enough to bend the righteous through rumor and cunning rather than open battle.
-He has a named technique called 天地斬血 that marks a wound with a cold, slow ache.
+He has a named technique called 천지참혈 that marks a wound with a cold, slow ache.
 He appears in visions as a calm face in a ruined temple to those who dare to dream of the seal.
 He will use the Celestial Jade Guests' networks when secrecy is required.
 He trusts character_chae_seobang's information for a price and for precision.

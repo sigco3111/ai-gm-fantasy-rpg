@@ -7,7 +7,7 @@ He is the last named disciple of faction_white_cloud_sword_sect's inner circle.
 Three moons ago the White Cloud compound burned and his shifu fell defending the inner hall.
 He keeps a single-edge jian his master gave him on the night of his naming day.
 A plain red thread is tied at the jian's pommel and he touches it when he cannot sleep.
-He trains the sect's foundational sword form, 白雲三十二劍, with steady repetition.
+He trains the sect's foundational sword form, 백운삼십이검, with steady repetition.
 His footwork is clean but his inner cultivation is only at the threshold of qi-sensing.
 He is not a prodigy; he is patient and industrious in a way that looks like stubbornness.
 His face is young and sun-darkened, with a narrow scar along his left brow.
@@ -18,7 +18,7 @@ The townsfolk call him "the red-threaded swordsman" in tavern whispers.
 He remembers his shixiong's laugh and sometimes mouths it when the night goes long.
 He can sense a blade's edge with more clarity than most of his age.
 His parry is precise, his thrust straightforward and earnest.
-He practices a counter-step the elders call 幻影步, a simple trick he learned from a visiting shixiong.
+He practices a counter-step the elders call 환영보, a simple trick he learned from a visiting shixiong.
 He has a habit of cleaning the jian's scabbard until the red thread frays.
 He does not like to boast and avoids tavern boasts that draw knives by habit.
 He trusts character_chae_seobang's words too quickly and regrets it in private.

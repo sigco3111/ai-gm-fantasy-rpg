@@ -11,7 +11,7 @@ He knows the old songs sung when seals were made and the verses that call them u
 He keeps a record of the righteous army's campaigns and reads it at night by candle.
 He has a known friendship with character_nangong_soyeong that reads like respectful distance and shared obligation.
 He fears the cult's influence will topple the careful structures that keep monasteries safe.
-He performs a daily set of exercises called 般若掌 to keep a monk's breath steady.
+He performs a daily set of exercises called 반야장 to keep a monk's breath steady.
 His hands are marked with small white scars from long practice on stone pillars.
 He has a shidi who leads an infantry of young monks and a shixiong in charge of training the initiates.
 He will march when the cause is right and will pray when the cause is not yet true.
@@ -34,7 +34,7 @@ He keeps a wooden plaque inscribed with the monastery's code in his private room
 He will not tolerate wanton slaughter but will not balk at necessary defence.
 He once walked through a battlefield and carried a wounded young woman to safety, a deed few remember.
 He holds grudges in the way old trees hold rings: visible, layered, understandable with care.
-He has a named practice called 静心破陣 for calming the mind before a battle-line.
+He has a named practice called 정심파진 for calming the mind before a battle-line.
 He will call for recruits when the righteous army needs men to hold the line.
 He fears the corruption of his own monastery more than the loss of banners to outsiders.
 His current goal is to marshal a force that can protect villages and to teach a new generation restraint.
