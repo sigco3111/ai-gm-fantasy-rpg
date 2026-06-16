@@ -5,8 +5,9 @@
 
 [![Genre](https://img.shields.io/badge/genre-fantasy%20rpg-purple)](#🎮-새-게임을-시작하세요)
 [![Depends on](https://img.shields.io/badge/depends%20on-ai--gm-blue)](#요구사항)
-[![Status](https://img.shields.io/badge/status-Phase%201%20complete-brightgreen)](#-로드맵)
+[![Status](https://img.shields.io/badge/status-Phase%203%20in%20progress-yellow)](#-로드맵)
 [![Tests](https://img.shields.io/badge/tests-20%20passed-brightgreen)](#-테스트)
+[![Seeds](https://img.shields.io/badge/sample%20seeds-2-blue)](#-샘플-시드-바로-시작-가능--sample-seeds-play-immediately)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](#라이선스)
 
 ### 🚀 LLM 에이전트용 설치 가이드 / LLM-agent install guide
@@ -29,7 +30,7 @@
 
 - 판타지 RPG의 JSON 스키마 (party / characters / spells / quests / items / regions)
 - 판타지 톤에 맞춘 GM 시스템 프롬프트
-- **시작 가능한 샘플 시드** (예: 드래곤 시대 1024)
+- **시작 가능한 샘플 시드** (예: 드래곤 시대 1024, 강호 1508)
 - **사용자 정의 시드**를 만드는 도구와 가이드
 - 샘플 lore (세력 / 종족 / 마법 체계 / 신화 / 지리)
 
@@ -56,7 +57,7 @@ This is a **genre plugin** for the [`sigco3111/ai-gm`](https://github.com/sigco3
 
 - Genre-specific JSON schemas (party, characters, spells, quests, items, regions)
 - GM system prompt tuned for fantasy tone
-- **Sample seeds** you can play right away (e.g. Age of Dragons 1024)
+- **Sample seeds** you can play right away (e.g. Age of Dragons 1024, Jianghu 1508)
 - **Tools & guides for crafting your own seed**
 - Sample lore (factions, races, magic systems, myth, geography)
 
@@ -89,10 +90,10 @@ The GM opens with a single question — **"What kind of game do you want to play
 
 | # | 결정 / Decision | 옵션 (예시) / Options (examples) |
 |---|---------|------|
-| 1 | **시대 / Era** | Pre-Drake Era → Dragon-Wake (1000~1100) → Age of Banners (1100~1300) → Sundering War (1300~1400) → Modern Kingdoms (1400+) |
-| 2 | **톤 / Tone** | 사실주의 / 저마법 / 고마법 / 신화·전설 / 다크 / 영웅 서사 |
+| 1 | **시대 / Era** | Western: Pre-Drake Era → Dragon-Wake (1000~1100) → Age of Banners (1100~1300) → Sundering War (1300~1400) → Modern Kingdoms (1400+) · Eastern: 천마대전 이전 → 봉인 시대 (~1458) → 대운 (1508) → 후봉인 (~1550) |
+| 2 | **톤 / Tone** | 사실주의 / 저마법 / 고마법 / 신화·전설 / 다크 / 영웅 서사 / **무협(고강력, xianxia-adjacent)** |
 | 3 | **맵 규모 / Map scale** | 소규모 (1지역 깊이) / 중규모 (5~10 지역) / 대규모 (20+ 지역) — 파티 중심이므로 지역 단위가 중요합니다 |
-| 4 | **캐릭터 / Character** | GM이 생성한 후보 중 선택 — 또는 직접 설계 (종족, 직업, 배경, 능력치 분배) |
+| 4 | **캐릭터 / Character** | GM이 생성한 후보 중 선택 — 또는 직접 설계 (종족, 직업, 배경, 능력치 분배; 무협의 경우 무공 계열과 사제 관계) |
 
 **모르겠으면?** 추천 시나리오나 샘플 시드를 골라 시작하세요.
 
@@ -152,13 +153,13 @@ This seed contains 18 entities (7 factions + 5 characters + 6 provinces) and 43 
 
 ## 🌸 샘플 시드 미리보기: Jianghu 1508 / Sample Seed Preview: Jianghu 1508
 
-> **이것은 무협(무협) 장르의 샘플입니다.** 플레이어는 떠돌이 검사로 강호(강호)에 발을 들이게 됩니다.
+> **이것은 무협 장르의 샘플입니다.** 플레이어는 떠돌이 검사로 강호에 발을 들이게 됩니다.
 >
 > **This is a wuxia (martial arts) genre sample.** The player steps into the jianghu as a wandering swordsman.
 
-대운(대운) 1508년, 늦봄. 50년 전 정마대전을 끝낸 아홉 장로의 봉인이 깨졌습니다. 변경 산성 **청풍성(청풍성)** 은 3개월 전 천마신교의 기습으로 반쯤 잿더미가 되었고, 백운검파의 잔당들은 헐건 대숲의 초가삼간에 간판을 걸어둔 형편입니다. 강호에는 오래된 표가 다시 돌아왔다는 소문이 퍼지고, 무당·소림의 장문인들은 산에서 내려옵니다.
+대운 1508년, 늦봄. 50년 전 정마대전을 끝낸 아홉 장로의 봉인이 깨졌습니다. 변경 산성 **청풍성** 은 3개월 전 천마신교의 기습으로 반쯤 잿더미가 되었고, 백운검파의 잔당들은 헐건 대숲의 초가삼간에 간판을 걸어둔 형편입니다. 강호에는 오래된 표가 다시 돌아왔다는 소문이 퍼지고, 무당·소림의 장문인들은 산에서 내려옵니다.
 
-Year 1508 of the Dawoon (대운) calendar, Late Spring. The nine-elder seal that ended the great righteous-demon war fifty winters ago has been broken. The frontier mountain-town of **Cheongpungseong** was half-burned three months ago by a Heavenly Demon Cult raid, and the White Cloud Sword Sect survivors cling to a hilltop hut that still calls itself the "main hall." Rumors of the demon's return spread across the jianghu, and the orthodox patriarchs descend from their mountains.
+Year 1508 of the Dawoon calendar, Late Spring. The nine-elder seal that ended the great righteous-demon war fifty winters ago has been broken. The frontier mountain-town of **Cheongpungseong** was half-burned three months ago by a Heavenly Demon Cult raid, and the White Cloud Sword Sect survivors cling to a hilltop hut that still calls itself the "main hall." Rumors of the demon's return spread across the jianghu, and the orthodox patriarchs descend from their mountains.
 
 **핵심 세부사항 / Key facts:**
 
@@ -179,9 +180,9 @@ This seed matches the same 18 entities (7 factions + 5 characters + 6 provinces)
 
 **Threats:** Macheonbaek and the resurrected Heavenly Demon Cult, blood-altar raids on orthodox outposts, the Blood Sword Alliance's opportunism, the Huashan Sect's cold judgment, and the quiet fact that the seal was never as solid as the elders said.
 
-Reference seed directory: `lore/seeds/age-of-dragons-1024/`
-
 ---
+
+Reference seed directories: `lore/seeds/age-of-dragons-1024/` (western) and `lore/seeds/jianghu-1508/` (eastern).
 
 ## 🧱 장르 엔티티 / Genre-Specific Entities
 
@@ -226,12 +227,18 @@ ai-gm-fantasy-rpg/
 │   │   ├── exploration.md                 # 5 chunks: travel, dungeon, rest, perception, weather
 │   │   └── social.md                      # 5 chunks: reactions, persuasion, reputation, trade, rumors
 │   ├── seeds/
-│   │   └── age-of-dragons-1024/           # canonical sample seed
+│   │   ├── age-of-dragons-1024/           # primary sample seed (western, high_fantasy)
+│   │   │   ├── seed.json                  # 18 entities, schema_version 1
+│   │   │   ├── overview.md                # 5 chunks (1 event + 4 misc)
+│   │   │   ├── factions/                  # 7 files (faction chunks)
+│   │   │   ├── characters/                # 5 files (character chunks)
+│   │   │   └── regions/                   # 6 files (location chunks)
+│   │   └── jianghu-1508/                  # eastern sample seed (wuxia_classic)
 │   │       ├── seed.json                  # 18 entities, schema_version 1
-│   │       ├── overview.md                # 5 chunks (1 event + 4 misc)
-│   │       ├── factions/                  # 7 files (faction chunks)
-│   │       ├── characters/                # 5 files (character chunks)
-│   │       └── regions/                   # 6 files (location chunks)
+│   │       ├── overview.md                # 5 chunks
+│   │       ├── factions/                  # 7 files
+│   │       ├── characters/                # 5 files
+│   │       └── regions/                   # 6 files
 ├── schemas/                               # pointer to core schema + genre notes
 ├── system_prompt.md                       # GM behavior guide (detailed, multi-section)
 ├── seed_template.json                     # authoring contract for seeds
@@ -312,7 +319,7 @@ python -m ai_gm
 
 ### 4. 게임 시작 / Start a game (MCP JSON-RPC 예시)
 
-#### 4.1. start_game_with_seed("age-of-dragons-1024") — 권장
+#### 4.1. start_game_with_seed("age-of-dragons-1024") 또는 ("jianghu-1508") — 권장
 
 ```json
 {
@@ -325,6 +332,8 @@ python -m ai_gm
   }
 }
 ```
+
+서양 판타지를 원하면 `"seed_id": "age-of-dragons-1024"`, 동양 무협을 원하면 `"seed_id": "jianghu-1508"`. 시드 ID는 대소문자까지 일치해야 합니다.
 
 예상 응답(요약):
 
@@ -387,6 +396,8 @@ python -m ai_gm
 }
 ```
 
+무협 시드(`jianghu-1508`)에서는 `actor_id`가 `character_seol_muyeong`이 되고, `game_id`를 `jianghu-1508`로 바꿔 동일하게 호출합니다.
+
 GM는 도구 결과를 받고 그 결과를 서술로 풀어냅니다. 절대 임의 숫자 금지 — 모든 수치는 도구 호출 결과나 state에서 옵니다.
 
 ---
@@ -413,7 +424,7 @@ OpenCode 예:
 }
 ```
 
-에이전트에게 이렇게 말하세요: "Start a new game of ai-gm-fantasy-rpg with the age-of-dragons-1024 seed"
+에이전트에게 이렇게 말하세요: "Start a new game of ai-gm-fantasy-rpg with the age-of-dragons-1024 seed" (또는 "with the jianghu-1508 seed" — 강호 무협)
 
 에이전트는 `start_game_with_seed`를 호출하고 이후 `read_state` → `advance_turn` 사이클을 돌립니다.
 
@@ -433,7 +444,7 @@ PYTHONPATH="../ai-gm/src" python scripts/manual_qa.py 2>&1 | tee /tmp/manual_qa_
 
 ### 8. 자신만의 시드 작성 / Author your own seed
 
-`lore/seeds/`에서 `age-of-dragons-1024/` 템플릿을 복사하여 새 시드를 작성하세요. 최소 요구사항:
+`lore/seeds/`에서 기존 시드(`age-of-dragons-1024/` 서양 판타지 또는 `jianghu-1508/` 동양 무협) 디렉터리를 템플릿으로 복사하여 새 시드를 작성하세요. 최소 요구사항:
 
 - `seed.json` — state-shape JSON, `schema_version: 1`, `game_id` 필드
 - `overview.md` — 1페이지 서사 (선택적 chunk 헤더 ok)
@@ -443,7 +454,7 @@ PYTHONPATH="../ai-gm/src" python scripts/manual_qa.py 2>&1 | tee /tmp/manual_qa_
 
 `seed_id` 형식 제한: ASCII 소문자, 숫자, `-` 및 `_` 만 사용. (한국어는 `name` 필드에만 허용)
 
-예: `age-of-dragons-1024`, `lost-mines-1187`, `black-tower-892`
+예: `age-of-dragons-1024`, `jianghu-1508`, `lost-mines-1187`, `black-tower-892`, `cursed-coast-1270`
 
 테스트: `PYTHONPATH="../ai-gm/src" python -m pytest tests/ -v` — 20/20 통과를 목표로 하세요.
 
@@ -510,9 +521,9 @@ No silent fixes. 도구 실패나 검증 오류는 플레이어에게 즉시 보
 | Phase | 범위 / Scope | 상태 / Status |
 |-------|-------------|------------|
 | **0. 계획** | 아키텍처, README, 시드 시스템 설계 | ✅ 완료 |
-| **1. 시드 시스템** | `seed_template.json` + `lore/seeds/age-of-dragons-1024/` (샘플 1개) + 20 tests | ✅ 완료 |
+| **1. 시드 시스템** | `seed_template.json` + `lore/seeds/{age-of-dragons-1024, jianghu-1508}/` (샘플 2개) + 20 tests | ✅ 완료 |
 | **2. 스키마 통합** | ai-gm core `start_game_with_seed` 통합 | ✅ 완료 |
-| **3. 더 많은 샘플 시드** | 추가 시드(동양풍, 다크 판타지 등) | ⏳ 진행 중 |
+| **3. 더 많은 샘플 시드** | 동양풍 = ✅ `jianghu-1508` (wuxia); 다크 판타지·해적·호러 등 추가 시드 | ⏳ 진행 중 (1/2) |
 | **4. 파티 시스템** | 멀티 캐릭터 파티 로직, 파티 관리 UI | ⏳ 예정 |
 | **5. 샘플 플레이** | 50턴 예시 플레이 스크립트 | ⏳ 예정 |
 | **6. NPC 자율성** | NPC 파벌의 자율 의사결정 & 이벤트 생성 | ⏳ 예정 |
@@ -521,11 +532,16 @@ No silent fixes. 도구 실패나 검증 오류는 플레이어에게 즉시 보
 
 ## 🎨 톤 & 영감 / Tone & Inspiration
 
-기본 톤은 고전 D&D풍의 하이 판타지(영웅 서사)입니다. 그러나 각 시드에서 톤을 지정하면 GM이 그 톤을 따릅니다.
+기본 톤은 고전 D&D풍의 하이 판타지(영웅 서사)입니다. 그러나 각 시드에서 톤을 지정하면 GM이 그 톤을 따릅니다. 현재 두 가지 톤이 시드에서 시연됩니다:
 
-- D&D 5e / Pathfinder 2e — 클래스·레벨·주문 구조
-- Baldur's Gate 3 — 대화·관계 기반 선택
-- Elden Ring — 환경과 암시로 분위기 전달
+- **서양 (high_fantasy)** — `age-of-dragons-1024`:
+  - D&D 5e / Pathfinder 2e — 클래스·레벨·주문 구조
+  - Baldur's Gate 3 — 대화·관계 기반 선택
+  - Elden Ring — 환경과 암시로 분위기 전달
+- **동양 (wuxia_classic / 고강력)** — `jianghu-1508`:
+  - 고룡 / 김용 무협소설 — 강호·무공·사제·의리
+  - xianxia-adjacent — 내공(내력)·경지(단계)·천인(극의)
+  - 무협 영화/드라마 — 칼날 위로 흐르는 비, 대숲 속 눈빛의 대치
 
 플레이어 권리가 최우선입니다. GM은 플레이어 입력 없이 플롯을 강제로 진행하지 않습니다.
 
