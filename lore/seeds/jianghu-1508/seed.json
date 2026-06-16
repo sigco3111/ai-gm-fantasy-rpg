@@ -1,0 +1,455 @@
+{
+  "game_id": "jianghu-1508",
+  "schema_version": 1,
+  "turn": 0,
+  "created_at": "2026-06-16T00:00:00Z",
+  "event_log": [],
+  "entities": [
+    {
+      "id": "faction_white_cloud_sword_sect",
+      "type": "faction",
+      "name": "백운검파 (White Cloud Sword Sect)",
+      "attributes": {
+        "government": "martial_sect",
+        "ruler_id": "character_seol_muyeong",
+        "stats": {
+          "economy": 30,
+          "military": 55,
+          "stability": 50,
+          "legitimacy": 60
+        },
+        "resources": {
+          "gold": 200,
+          "food": 800,
+          "iron": 150
+        },
+        "modifiers": [
+          "recently-raided",
+          "disgraced",
+          "player-aligned"
+        ],
+        "diplomatic_relations": {}
+      }
+    },
+    {
+      "id": "faction_heavenly_demon_cult",
+      "type": "faction",
+      "name": "천마신교 (Heavenly Demon Cult)",
+      "attributes": {
+        "government": "cult",
+        "ruler_id": "character_macheonbaek",
+        "stats": {
+          "economy": 40,
+          "military": 90,
+          "stability": 65,
+          "legitimacy": 75
+        },
+        "resources": {
+          "gold": 1500,
+          "food": 2000,
+          "iron": 300
+        },
+        "modifiers": [
+          "demon-led",
+          "expansionist",
+          "blood-aspected"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": -90,
+          "faction_wudang_sect": -90,
+          "faction_shaolin_temple": -50,
+          "faction_huashan_sect": -30,
+          "faction_blood_sword_alliance": -10,
+          "faction_celestial_jade_guests": -70
+        }
+      }
+    },
+    {
+      "id": "faction_wudang_sect",
+      "type": "faction",
+      "name": "무당파 (Wudang Sect)",
+      "attributes": {
+        "government": "monastery_sect",
+        "ruler_id": "character_nangong_soyeong",
+        "stats": {
+          "economy": 65,
+          "military": 65,
+          "stability": 85,
+          "legitimacy": 90
+        },
+        "resources": {
+          "gold": 1200,
+          "food": 1500,
+          "iron": 200
+        },
+        "modifiers": [
+          "scholarly",
+          "daoist-heritage",
+          "neutral-orthodoxy"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": 40,
+          "faction_heavenly_demon_cult": -90,
+          "faction_shaolin_temple": 30,
+          "faction_huashan_sect": 20,
+          "faction_blood_sword_alliance": -50,
+          "faction_celestial_jade_guests": 0
+        }
+      }
+    },
+    {
+      "id": "faction_shaolin_temple",
+      "type": "faction",
+      "name": "소림사 (Shaolin Temple)",
+      "attributes": {
+        "government": "monastery_sect",
+        "ruler_id": "character_hyeneung",
+        "stats": {
+          "economy": 70,
+          "military": 75,
+          "stability": 90,
+          "legitimacy": 95
+        },
+        "resources": {
+          "gold": 2000,
+          "food": 2500,
+          "iron": 100
+        },
+        "modifiers": [
+          "buddhist-heritage",
+          "righteous-army",
+          "ancient"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": 50,
+          "faction_heavenly_demon_cult": -50,
+          "faction_wudang_sect": 30,
+          "faction_huashan_sect": 25,
+          "faction_blood_sword_alliance": -60,
+          "faction_celestial_jade_guests": -10
+        }
+      }
+    },
+    {
+      "id": "faction_huashan_sect",
+      "type": "faction",
+      "name": "화산파 (Huashan Sect)",
+      "attributes": {
+        "government": "martial_sect",
+        "ruler_id": null,
+        "stats": {
+          "economy": 50,
+          "military": 70,
+          "stability": 60,
+          "legitimacy": 70
+        },
+        "resources": {
+          "gold": 800,
+          "food": 1000,
+          "iron": 400
+        },
+        "modifiers": [
+          "sword-focused",
+          "prestige-hungry",
+          "orthodoxy"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": 30,
+          "faction_heavenly_demon_cult": -30,
+          "faction_wudang_sect": 20,
+          "faction_shaolin_temple": 25,
+          "faction_blood_sword_alliance": -40,
+          "faction_celestial_jade_guests": -5
+        }
+      }
+    },
+    {
+      "id": "faction_blood_sword_alliance",
+      "type": "faction",
+      "name": "혈수맹 (Blood Sword Alliance)",
+      "attributes": {
+        "government": "criminal_alliance",
+        "ruler_id": null,
+        "stats": {
+          "economy": 55,
+          "military": 80,
+          "stability": 50,
+          "legitimacy": 20
+        },
+        "resources": {
+          "gold": 2500,
+          "food": 1000,
+          "iron": 1500
+        },
+        "modifiers": [
+          "bandit-confederacy",
+          "ruthless",
+          "illicit-trade"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": -10,
+          "faction_heavenly_demon_cult": -10,
+          "faction_wudang_sect": -50,
+          "faction_shaolin_temple": -60,
+          "faction_huashan_sect": -40,
+          "faction_celestial_jade_guests": -20
+        }
+      }
+    },
+    {
+      "id": "faction_celestial_jade_guests",
+      "type": "faction",
+      "name": "천상옥객 (Celestial Jade Guests)",
+      "attributes": {
+        "government": "assassin_guild",
+        "ruler_id": "character_chae_seobang",
+        "stats": {
+          "economy": 75,
+          "military": 60,
+          "stability": 65,
+          "legitimacy": 30
+        },
+        "resources": {
+          "gold": 3000,
+          "food": 800,
+          "iron": 500
+        },
+        "modifiers": [
+          "mercenary",
+          "information-brokers",
+          "non-aligned"
+        ],
+        "diplomatic_relations": {
+          "faction_white_cloud_sword_sect": 0,
+          "faction_heavenly_demon_cult": -70,
+          "faction_wudang_sect": 0,
+          "faction_shaolin_temple": -10,
+          "faction_huashan_sect": -5,
+          "faction_blood_sword_alliance": -20
+        }
+      }
+    },
+    {
+      "id": "character_seol_muyeong",
+      "type": "character",
+      "name": "설무영 (Seol Muyeong)",
+      "attributes": {
+        "age": 22,
+        "traits": [
+          "young-swordsman",
+          "curious",
+          "idealistic",
+          "talented-but-untested"
+        ],
+        "location_id": "province_cheongpungseong",
+        "loyalty": 85,
+        "modifiers": [
+          "player-character",
+          "white-cloud-disgraced"
+        ]
+      }
+    },
+    {
+      "id": "character_macheonbaek",
+      "type": "character",
+      "name": "마천백 (Macheonbaek)",
+      "attributes": {
+        "age": 67,
+        "traits": [
+          "demon-elder",
+          "cruel",
+          "intelligent",
+          "blood-aspected",
+          "territorial"
+        ],
+        "location_id": "province_heavenly_demon_palace",
+        "loyalty": 100,
+        "modifiers": [
+          "antagonist",
+          "demon-art-master",
+          "immortal-techniques"
+        ]
+      }
+    },
+    {
+      "id": "character_nangong_soyeong",
+      "type": "character",
+      "name": "남궁소영 (Nangong Soyeong)",
+      "attributes": {
+        "age": 73,
+        "traits": [
+          "daoist-elder",
+          "scholarly",
+          "patient",
+          "farsighted"
+        ],
+        "location_id": "province_wudang_mountain",
+        "loyalty": 95,
+        "modifiers": [
+          "wudang-patriarch",
+          "mentor-figure"
+        ]
+      }
+    },
+    {
+      "id": "character_hyeneung",
+      "type": "character",
+      "name": "혜능 (Hyeneung)",
+      "attributes": {
+        "age": 91,
+        "traits": [
+          "buddhist-elder",
+          "compassionate",
+          "righteous",
+          "iron-willed"
+        ],
+        "location_id": "province_shaolin_temple",
+        "loyalty": 100,
+        "modifiers": [
+          "shaolin-abbot",
+          "righteous-army-veteran"
+        ]
+      }
+    },
+    {
+      "id": "character_chae_seobang",
+      "type": "character",
+      "name": "채서방 (Chae Seobang)",
+      "attributes": {
+        "age": 48,
+        "traits": [
+          "calculating",
+          "poised",
+          "shrewd",
+          "mercurial"
+        ],
+        "location_id": "province_cheongpungseong",
+        "loyalty": 70,
+        "modifiers": [
+          "guildmaster",
+          "information-broker"
+        ]
+      }
+    },
+    {
+      "id": "province_cheongpungseong",
+      "type": "province",
+      "name": "청풍성 (Cheongpungseong)",
+      "attributes": {
+        "population": 8000,
+        "controller_id": "faction_white_cloud_sword_sect",
+        "terrain": "hills",
+        "resource_yields": {
+          "gold": 20,
+          "food": 250,
+          "iron": 40
+        },
+        "modifiers": [
+          "recently-raided",
+          "fortified",
+          "frontier-town"
+        ]
+      }
+    },
+    {
+      "id": "province_wudang_mountain",
+      "type": "province",
+      "name": "무당산 (Wudang Mountain)",
+      "attributes": {
+        "population": 3000,
+        "controller_id": "faction_wudang_sect",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 80,
+          "food": 400,
+          "iron": 60
+        },
+        "modifiers": [
+          "monastery",
+          "isolated",
+          "spiritually-shielded"
+        ]
+      }
+    },
+    {
+      "id": "province_shaolin_temple",
+      "type": "province",
+      "name": "소림사 (Shaolin Temple)",
+      "attributes": {
+        "population": 5000,
+        "controller_id": "faction_shaolin_temple",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 150,
+          "food": 600,
+          "iron": 30
+        },
+        "modifiers": [
+          "ancient-monastery",
+          "righteous-army-base",
+          "iron-fist-tradition"
+        ]
+      }
+    },
+    {
+      "id": "province_huashan",
+      "type": "province",
+      "name": "화산 (Huashan)",
+      "attributes": {
+        "population": 4000,
+        "controller_id": "faction_huashan_sect",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 100,
+          "food": 300,
+          "iron": 200
+        },
+        "modifiers": [
+          "sword-palace",
+          "prestigious",
+          "narrow-trails"
+        ]
+      }
+    },
+    {
+      "id": "province_blood_sword_forest",
+      "type": "province",
+      "name": "혈수림 (Blood Sword Forest)",
+      "attributes": {
+        "population": 6000,
+        "controller_id": "faction_blood_sword_alliance",
+        "terrain": "forest",
+        "resource_yields": {
+          "gold": 60,
+          "food": 200,
+          "iron": 100
+        },
+        "modifiers": [
+          "lawless",
+          "dense-woods",
+          "smuggling-route"
+        ]
+      }
+    },
+    {
+      "id": "province_heavenly_demon_palace",
+      "type": "province",
+      "name": "천마궁 (Heavenly Demon Palace)",
+      "attributes": {
+        "population": 2000,
+        "controller_id": "faction_heavenly_demon_cult",
+        "terrain": "mountains",
+        "resource_yields": {
+          "gold": 200,
+          "food": 100,
+          "iron": 400
+        },
+        "modifiers": [
+          "demon-stronghold",
+          "blood-altar",
+          "cursed"
+        ]
+      }
+    }
+  ]
+}

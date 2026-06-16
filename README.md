@@ -105,7 +105,7 @@ The GM opens with a single question — **"What kind of game do you want to play
 | 시드 / Seed | 시대 / Era | 톤 / Tone | 맵 규모 / Scale | 시작점 / Starting point |
 |------|------|------|------|------|
 | **age-of-dragons-1024** | 1024 CE (Dragon-Wake) | high_fantasy | 소규모 (변방 마을) | Shallowstone — 마을 광장 |
-| _(추가 샘플 시드 예정)_ | | | | |
+| **jianghu-1508** | 1508 (대운 / Dawoon, 50년 뒤 천마 봉인 파괴) | wuxia_classic | 중규모 (江湖 6지역) | 청풍성 (Cheongpungseong) — 변경 산성 |
 
 샘플 시드는 단지 시작점입니다. 게임이 진행되면 GM은 설정을 플레이어 선택에 맞게 확장합니다.
 
@@ -147,6 +147,37 @@ This seed contains 18 entities (7 factions + 5 characters + 6 provinces) and 43 
 **Starting opportunities:** warding the granary, scouting Dragonmount, negotiating with the nearby lord Lyondell, recruiting hardened mercenaries in the next market week.
 
 **Threats:** Kargad the Red Wyrm (ancient red dragon, 842yo), three dragonkin lieutenants, bandit opportunists, resource shortages.
+
+---
+
+## 🌸 샘플 시드 미리보기: Jianghu 1508 / Sample Seed Preview: Jianghu 1508
+
+> **이것은 무협(武俠) 장르의 샘플입니다.** 플레이어는 떠돌이 검사로 강호(江湖)에 발을 들이게 됩니다.
+>
+> **This is a wuxia (martial arts) genre sample.** The player steps into the jianghu as a wandering swordsman.
+
+대운(大雲) 1508년, 늦봄. 50년 전 정마대전을 끝낸 아홉 장로의 봉인이 깨졌습니다. 변경 산성 **청풍성(淸風城)** 은 3개월 전 천마신교의 기습으로 반쯤 잿더미가 되었고, 백운검파의 잔당들은 헐건 대숲의 초가삼간에 간판을 걸어둔 형편입니다. 강호에는 오래된 표가 다시 돌아왔다는 소문이 퍼지고, 무당·소림의 장문인들은 산에서 내려옵니다.
+
+Year 1508 of the Dawoon (大雲) calendar, Late Spring. The nine-elder seal that ended the great righteous-demon war fifty winters ago has been broken. The frontier mountain-town of **Cheongpungseong** was half-burned three months ago by a Heavenly Demon Cult raid, and the White Cloud Sword Sect survivors cling to a hilltop hut that still calls itself the "main hall." Rumors of the demon's return spread across the jianghu, and the orthodox patriarchs descend from their mountains.
+
+**핵심 세부사항 / Key facts:**
+
+- Player: 설무영 (Seol Muyeong), 22, last disciple of the White Cloud Sword Sect (白雲三十二劍, qi-sensing threshold)
+- Faction: 백운검파 (White Cloud Sword Sect) — disgraced orthodox sect, scattered, desperate
+- Antagonist: 마천백 (Macheonbaek), 67-year-old demon-cult elder, master of the 玄冥真气 (blood-aspected)
+- Mentor: 남궁소영 (Nangong Soyeong), 73, Wudang patriarch, the most senior surviving voice of orthodoxy
+- Starting location: 청풍성 (Cheongpungseong) — hills, frontier mountain town, population ~8,000, sect compound in ruins
+- Starting conditions: scattered sect survivors, no compound, broken seal rumors, jade-guest guildmaster already in town
+
+이 시드는 총 18 entities (7 factions + 5 characters + 6 provinces)와 동일하게 43+ lore chunks를 포함합니다. 청크 헤더 규약(## [CHUNK: TYPE -- NAME])과 1 turn = 1 day 규칙은 동일합니다.
+
+This seed matches the same 18 entities (7 factions + 5 characters + 6 provinces) and 43+ lore chunks as the dragon seed. Same chunk header convention (`## [CHUNK: TYPE -- NAME]`) and 1 turn = 1 day pacing.
+
+**당신의 자리 / Your seat:** Seol Muyeong, junior swordsman with a single jian (red thread on the pommel) and a sealed letter he has never read. You start in Cheongpungseong's outer market with a stripped sect-name and a few scattered shixiong.
+
+**Starting opportunities:** seek out the Celestial Jade Guests for news of your scattered brothers, climb to Wudang for counsel, ride south to Shaolin's righteous army, or follow a rumored survivor into the Blood Sword Forest.
+
+**Threats:** Macheonbaek and the resurrected Heavenly Demon Cult, blood-altar raids on orthodox outposts, the Blood Sword Alliance's opportunism, the Huashan Sect's cold judgment, and the quiet fact that the seal was never as solid as the elders said.
 
 Reference seed directory: `lore/seeds/age-of-dragons-1024/`
 
